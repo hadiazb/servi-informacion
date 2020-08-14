@@ -25,3 +25,8 @@ export const Item = styled.li`
 	padding-left: 20px;
 `;
 
+export const Img = styled.img`
+	width: 30px;
+	color: white;
+`;
+

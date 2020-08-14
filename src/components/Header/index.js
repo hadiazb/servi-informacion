@@ -1,10 +1,14 @@
 import React from 'react';
-import { Container, List, Item, Main } from './style';
+import { Link } from 'react-router-dom';
+import { Container, List, Item, Img } from './style';
+import Logo from '../../../public/images/Servi.png';
 
 export const Header = () => {
 	return (
 		<Container>
-			<h3>Covid-19</h3>
+			<Link to='/'>
+				<Img src={Logo} alt='Logo Servi-información' />
+			</Link>
 			<List>
 				<Item>
 					<h4>Covid-19</h4>
