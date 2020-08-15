@@ -7,6 +7,7 @@ export const MaterialTableDemo = () => {
 		columns: [
 			{ title: 'State', field: 'location' },
 			{ title: 'Confirmed', field: 'confirmed' },
+			{ title: 'Dead', field: 'dead' },
 		],
 		data: [
 			{
@@ -207,8 +208,9 @@ export const MaterialTableDemo = () => {
 			<MaterialTable
 				columns={arr.columns}
 				data={arr.data}
-				title='USA'
+				title='US'
 				options={{ paging: false }}
+				style={{ backgroundColor: 'white', fontSize: '9px', height: '10' }}
 			/>
 		</Container>
 	);

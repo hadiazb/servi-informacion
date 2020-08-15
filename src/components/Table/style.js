@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  border: 1px solid black;
   width: 100%;
-  height: 400px;
+  height: 350px;
   overflow-y: scroll;
+  overflow-x: hidden;
   border-radius: 10px;
+  box-shadow: 0 0 4px black;
+  background-color: white;
 
   &::-webkit-scrollbar {
     width: 3px;

@@ -15,12 +15,11 @@ export const Map = () => {
 	const URL = 'https://www.trackcorona.live/api/provinces';
 	const { data, error } = useSwr(URL, { fetcher });
 
-	console.log(data);
+
 	const usaData =
 		data && !error
 			? data.filter((i) => i.country_code === 'us')
 			: [];
-	console.log(usaData);
 
 	return (
 		<Container>
@@ -38,7 +37,6 @@ export const Map = () => {
 							<img src={Img} alt="Logo"/>
 						</Button>
 					</Marker>
-					console.log('hola');
 				})
 			}
 		</Container>
