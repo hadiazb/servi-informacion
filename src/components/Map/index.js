@@ -1,8 +1,27 @@
 import React from 'react';
-import { Container } from './style';
+import { Container, Button } from './style';
 import GoogleMapReact from 'google-map-react';
+import useSwr from 'swr';
+import Img from '../../../public/images/servi.svg'
+
+const fetcher = (...args) =>
+	fetch(...args).then((response) =>
+		response.json().then((response) => response.data)
+	);
+
+const Marker = ({ children }) => children;
 
 export const Map = () => {
+	const URL = 'https://www.trackcorona.live/api/provinces';
+	const { data, error } = useSwr(URL, { fetcher });
+
+	console.log(data);
+	const usaData =
+		data && !error
+			? data.filter((i) => i.country_code === 'us')
+			: [];
+	console.log(usaData);
+
 	return (
 		<Container>
 			<GoogleMapReact
@@ -12,6 +31,16 @@ export const Map = () => {
 				defaultCenter={{ lat: 40.3056, lng: -101.377568 }}
 				defaultZoom={4.5}
 			/>
+			{
+				usaData.map(id => {
+					<Marker  lat={id.latitude} lng={id.longitude}>
+						<Button>
+							<img src={Img} alt="Logo"/>
+						</Button>
+					</Marker>
+					console.log('hola');
+				})
+			}
 		</Container>
 	);
 };

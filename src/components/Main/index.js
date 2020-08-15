@@ -5,11 +5,12 @@ import React, {
 	useEffect,
 	useState,
 } from 'react';
+import { MaterialTableDemo } from '../Table/index';
 
 export const Main = () => {
 	return (
-		<Fragment>
-			<Container></Container>
-		</Fragment>
+		<Container>
+			<MaterialTableDemo />
+		</Container>
 	);
 };

@@ -8,3 +8,10 @@ export const Container = styled.div`
 		width: 100%;
 	}
 `;
+
+export const Button = styled.button`
+	width: 10px;
+	height: 10px;
+	border: none;
+	background: none;
+`;
