@@ -24,12 +24,19 @@ export const Main = () => {
 	return (
 		<Container>
 			<GeneralData
-				totalCases={usaData.confirmed}
-				totalActives={
+				country={usaData.location}
+				totalCases={new Intl.NumberFormat('de-DE').format(
+					usaData.confirmed
+				)}
+				totalActives={new Intl.NumberFormat('de-DE').format(
 					usaData.confirmed - usaData.dead - usaData.recovered
-				}
-				totalDead={usaData.dead}
-				totalRecovered={usaData.recovered}
+				)}
+				totalDead={new Intl.NumberFormat('de-DE').format(
+					usaData.dead
+				)}
+				totalRecovered={new Intl.NumberFormat('de-DE').format(
+					usaData.recovered
+				)}
 				totalUpdate={`${time} min`}
 			/>
 			<MaterialTableDemo />

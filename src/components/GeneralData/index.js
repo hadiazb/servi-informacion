@@ -16,6 +16,7 @@ import Logo from '../../../public/images/flag.svg';
 
 export const GeneralData = (props) => {
 	const {
+		country,
 		totalCases,
 		totalActives,
 		totalDead,
@@ -26,8 +27,8 @@ export const GeneralData = (props) => {
 		<Container>
 			<Head>
 				<Box>
-					<Img src={Logo} alt='' />
-					<h2>United States</h2>
+					<Img src={Logo} alt='US Flag' />
+					<h2>{country ? country : 'United States'}</h2>
 				</Box>
 			</Head>
 			<Total>
