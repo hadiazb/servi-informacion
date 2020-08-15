@@ -1,11 +1,10 @@
-import React from 'react';
-import { Container, Button } from './style';
+import React, { useState, useEffect } from 'react';
+import { Container, Circle, Box } from './style';
 import GoogleMapReact from 'google-map-react';
 import useSwr from 'swr';
-import Img from '../../../public/images/servi.svg'
 
-const fetcher = (...args) =>
-	fetch(...args).then((response) =>
+const fetcher = async (...args) =>
+	await fetch(...args).then((response) =>
 		response.json().then((response) => response.data)
 	);
 
@@ -13,8 +12,8 @@ const Marker = ({ children }) => children;
 
 export const Map = () => {
 	const URL = 'https://www.trackcorona.live/api/provinces';
-	const { data, error } = useSwr(URL, { fetcher });
 
+	const { data, error } = useSwr(URL, { fetcher });
 
 	const usaData =
 		data && !error
@@ -29,16 +28,23 @@ export const Map = () => {
 				}}
 				defaultCenter={{ lat: 40.3056, lng: -101.377568 }}
 				defaultZoom={4.5}
-			/>
-			{
-				usaData.map(id => {
-					<Marker  lat={id.latitude} lng={id.longitude}>
-						<Button>
-							<img src={Img} alt="Logo"/>
-						</Button>
-					</Marker>
-				})
-			}
+			>
+				{usaData.map((i) => (
+						<Marker
+							key={i.latitude}
+							lat={i.latitude}
+							lng={i.longitude}
+						>
+							<Circle
+								radius={`${Math.ceil(
+									(i.confirmed / 613243) * 100
+								)}px`}
+							>
+								X
+							</Circle>
+						</Marker>
+				))}
+			</GoogleMapReact>
 		</Container>
 	);
 };

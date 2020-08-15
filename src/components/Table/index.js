@@ -21,7 +21,6 @@ export const MaterialTableDemo = () => {
 		columns: [
 			{ title: 'State', field: 'location' },
 			{ title: 'Confirmed', field: 'confirmed' },
-			{ title: 'Dead', field: 'dead' },
 		],
 		data: usaData,
 	};
@@ -35,7 +34,7 @@ export const MaterialTableDemo = () => {
 				options={{ paging: false }}
 				style={{
 					backgroundColor: 'white',
-					fontSize: '9px',
+					fontSize: '14px',
 					height: '10',
 				}}
 			/>
