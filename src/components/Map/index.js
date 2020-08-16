@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Container, Circle } from './style';
 import GoogleMapReact from 'google-map-react';
 import useSwr from 'swr';
-import { Detail } from '../Detail/index';
+import Swal from 'sweetalert2';
 import mapStyle from '../../Hook/mapStyle';
+// import '../../assets/styles/tableStyle.css';
 
 const fetcher = async (...args) =>
 	await fetch(...args).then((response) =>
@@ -21,8 +22,6 @@ export const Map = () => {
 		data && !error
 			? data.filter((i) => i.country_code === 'us')
 			: [];
-
-	const [flag, setFlag] = useState(false);
 
 	const options = {
 		styles: mapStyle,
@@ -50,14 +49,85 @@ export const Map = () => {
 							radius={`${Math.ceil(
 								(i.confirmed / 613243) * 60
 							)}px`}
-							onMouseOver={() => setFlag(true)}
-							// onMouseOut={() => setFlag(false)}
-							// onClick={() => setFlag(true)}
+							onClick={() =>
+								Swal.fire({
+									title: 'Specific Dates',
+									html: `
+									<table style="width: 100%">
+										<tr style="padding: 20">
+											<th style="text-align: left">State</th>
+											<td style="text-align: right">${i.location}</td>
+										</tr>
+										<tr>
+											<th style="text-align: left">Code</th>
+											<td style="text-align: right">${i.country_code}</td>
+										</tr>
+										<tr>
+											<th style="text-align: left">Confirmed</th>
+											<td style="text-align: right">${i.confirmed}</td>
+										</tr>
+										<tr>
+											<th style="text-align: left">Dead</th>
+											<td style="text-align: right">${i.dead}</td>
+										</tr>
+										<tr>
+											<th style="text-align: left">Recovered</th>
+											<td style="text-align: right">${
+												i.recovered === null ? 'No Update' : i.recovered
+											}</td>
+										</tr>
+										<tr>
+											<th style="text-align: left">Update</th>
+											<td style="text-align: right">${(
+												(Date.parse(new Date()) -
+													Date.parse(i.updated)) /
+												6000000
+											).toFixed(0)} min</td>
+										</tr>
+									</table>
+									`,
+									width: '320px',
+									footer:
+										'<h4 style="color: #29FB08">TrackCorona Data</h4>',
+									padding: '5% 10px 20px',
+									background: 'rgba(0, 0, 0, .5)',
+									timer: 20000,
+									confirmButtonText: 'View more'
+								})
+							}
 						></Circle>
 					</Marker>
 				))}
 			</GoogleMapReact>
-			{flag ? <Detail /> : null}
 		</Container>
 	);
 };
+
+// const tabla =	`<h3>Specific Data</h3>
+// 	<table class='tabla'>
+// 		<tr>
+// 			<th>State</th>
+// 			<td>${i.location}</td>
+// 		</tr>
+// 		<tr>
+// 			<th>State</th>
+// 			<td>${i.confirmed}</td>
+// 		</tr>
+// 		<tr>
+// 			<th>State</th>
+// 			<td>${i.dead}</td>
+// 		</tr>
+// 		<tr>
+// 			<th>State</th>
+// 			<td>${i.recovered}</td>
+// 		</tr>
+// 		<tr>
+// 			<th>State</th>
+// 			<td>${i.country_code}</td>
+// 		</tr>
+// 		<tr>
+// 			<th>State</th>
+// 			<td>${i.updated}</td>
+// 		</tr>
+// 	</table>
+// 	`;
