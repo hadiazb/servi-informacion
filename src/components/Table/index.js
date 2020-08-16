@@ -30,7 +30,7 @@ export const MaterialTableDemo = () => {
 			<MaterialTable
 				columns={newArr.columns}
 				data={newArr.data}
-				title='US'
+				title=''
 				options={{ paging: false }}
 				style={{
 					backgroundColor: 'white',

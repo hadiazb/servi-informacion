@@ -16,6 +16,7 @@ export const Circle = styled.div`
 	border-radius: 50px;
 	border: 1px solid red;
 	background-color: rgba(255, 60, 0, 0.295);
+	box-shadow: 0 0 50px rgba(255, 60, 0, 0.295);
 	position: absolute;
 	top: -50%;
 `;

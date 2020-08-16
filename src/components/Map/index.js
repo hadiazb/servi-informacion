@@ -3,6 +3,7 @@ import { Container, Circle } from './style';
 import GoogleMapReact from 'google-map-react';
 import useSwr from 'swr';
 import { Detail } from '../Detail/index';
+import mapStyle from '../../Hook/mapStyle';
 
 const fetcher = async (...args) =>
 	await fetch(...args).then((response) =>
@@ -23,6 +24,12 @@ export const Map = () => {
 
 	const [flag, setFlag] = useState(false);
 
+	const options = {
+		styles: mapStyle,
+		disableDefaultUI: true,
+		zoomControl: true,
+	};
+
 	return (
 		<Container>
 			<GoogleMapReact
@@ -31,6 +38,7 @@ export const Map = () => {
 				}}
 				defaultCenter={{ lat: 40.3056, lng: -101.377568 }}
 				defaultZoom={4.5}
+				options={options}
 			>
 				{usaData.map((i) => (
 					<Marker
@@ -42,13 +50,14 @@ export const Map = () => {
 							radius={`${Math.ceil(
 								(i.confirmed / 613243) * 60
 							)}px`}
-							// onMouseOver={() => setFlag(true)}
-							onClick={() => setFlag(true)}
+							onMouseOver={() => setFlag(true)}
+							// onMouseOut={() => setFlag(false)}
+							// onClick={() => setFlag(true)}
 						></Circle>
 					</Marker>
 				))}
 			</GoogleMapReact>
-			{flag ? <Detail /> : setFlag(true)}
+			{flag ? <Detail /> : null}
 		</Container>
 	);
 };

@@ -17,8 +17,9 @@ export const GlobalStyle = createGlobalStyle`
   body {
     height: 100vh;
     overscroll-behavior: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
     width: 100%;
+    color: rgba(0, 0, 0, 0.87);
   }
   #app {
     overflow-x: hidden;

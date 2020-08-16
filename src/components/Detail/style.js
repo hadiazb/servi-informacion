@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	display: ${(props) => props.visibility ? props.visibility : 'block'};
+	display: ${(props) => props.visibility ? props.visibility : 'none'};
 	position: absolute;
 	bottom: 0;
 	left: 0;

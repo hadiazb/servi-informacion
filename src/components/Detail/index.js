@@ -7,7 +7,7 @@ export const Detail = () => {
 	return (
 		<div>
 			{flag ? (
-				<Container>
+				<Container visibility='block'>
 					<Card>
 						<button onClick={() => setFlag(false)}>Salir</button>
 					</Card>

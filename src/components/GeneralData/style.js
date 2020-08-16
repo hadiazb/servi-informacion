@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 200px;
+  height: 35%;
   margin: 0 0 10px 0;
   display: grid;
   grid-template-areas: "a a"
