@@ -21,7 +21,7 @@ export const Head = styled.div`
 export const Total = styled.div`
   grid-area: b;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #F1F7F1;
   box-shadow: 0 0 4px black;
   position: relative;
 `;
@@ -29,7 +29,7 @@ export const Total = styled.div`
 export const Active = styled.div`
   grid-area: c;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #F1F7F1;
   box-shadow: 0 0 4px black;
   position: relative;
 `;
@@ -37,7 +37,7 @@ export const Active = styled.div`
 export const Dead = styled.div`
   grid-area: d;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #F1F7F1;
   box-shadow: 0 0 4px black;
   position: relative;
 `;
@@ -45,7 +45,7 @@ export const Dead = styled.div`
 export const Recovered = styled.div`
   grid-area: e;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #F1F7F1;
   box-shadow: 0 0 4px black;
   position: relative;
 `;
@@ -53,7 +53,7 @@ export const Recovered = styled.div`
 export const Update = styled.div`
   grid-area: f;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #F1F7F1;
   box-shadow: 0 0 4px black;
   position: relative;
 `;
@@ -74,6 +74,7 @@ export const Title = styled.h6`
   position: absolute;
   top: 3px;
   left: 10px;
+  color: ${props => props.primary ? props.primary : 'black'};
 `;
 
 export const Value = styled.h4`

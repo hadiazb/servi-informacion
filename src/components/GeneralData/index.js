@@ -40,11 +40,11 @@ export const GeneralData = (props) => {
 				<Value>{totalActives ? totalActives : 'NaN'}</Value>
 			</Active>
 			<Dead>
-				<Title>Dead</Title>
+				<Title primary='red'>Dead</Title>
 				<Value>{totalDead ? totalDead : 'NaN'}</Value>
 			</Dead>
 			<Recovered>
-				<Title>Recovered</Title>
+				<Title primary='#0BF40B'>Recovered</Title>
 				<Value>{totalRecovered ? totalRecovered : 'NaN'}</Value>
 			</Recovered>
 			<Update>

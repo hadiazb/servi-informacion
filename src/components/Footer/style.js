@@ -14,3 +14,11 @@ export const Container = styled.div`
   bottom: 0;
   z-index: 1000;
 `;
+
+export const Anchor = styled.a`
+  color: #ffffff;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+`;

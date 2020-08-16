@@ -33,9 +33,8 @@ export const MaterialTableDemo = () => {
 				title=''
 				options={{ paging: false }}
 				style={{
-					backgroundColor: 'white',
-					fontSize: '14px',
-					height: '10',
+					backgroundColor: '#F1F7F1 ',
+					fontSize: '16px',
 				}}
 			/>
 		</Container>

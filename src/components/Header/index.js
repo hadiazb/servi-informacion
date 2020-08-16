@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, List, Item, Img } from './style';
 import Logo from '../../../public/images/Servi.png';
+import StorageIcon from '@material-ui/icons/Storage';
 
 export const Header = () => {
 	return (
@@ -14,7 +15,9 @@ export const Header = () => {
 					<h4>Covid-19</h4>
 				</Item>
 				<Item>
-					<h4>Covid-19</h4>
+					<Link to='/list' style={{color: 'white'}} >
+						<StorageIcon />
+					</Link>
 				</Item>
 			</List>
 		</Container>

@@ -1,11 +1,13 @@
 import React from 'react';
-import { Container } from './style';
+import { Container, Anchor } from './style';
 
 export const Footer = () => {
 	return (
 		<Container>
-			<h6>@hadiaz_ing</h6>
-			<h6>@hadiaz_ing</h6>
+			<Anchor href='https://twitter.com/hadiazb_ing'>@hadiaz_ing</Anchor>
+			<Anchor href='https://www.trackcorona.live/api'>
+				Trackcorona
+			</Anchor>
 		</Container>
 	);
 };

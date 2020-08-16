@@ -4,7 +4,6 @@ import GoogleMapReact from 'google-map-react';
 import useSwr from 'swr';
 import Swal from 'sweetalert2';
 import mapStyle from '../../Hook/mapStyle';
-// import '../../assets/styles/tableStyle.css';
 
 const fetcher = async (...args) =>
 	await fetch(...args).then((response) =>
