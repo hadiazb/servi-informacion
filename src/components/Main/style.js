@@ -5,7 +5,7 @@ export const Container = styled.div`
 	height: 100vh;
   padding: 10vh 10px 6vh;
   position: relative;
-	background-color: rgb(0, 150, 150);
+	background-color: #242524 ;
 	@media (max-width: 550px) {
     width: 100%;
   }

@@ -51,7 +51,7 @@ export const Map = () => {
 							)}px`}
 							onClick={() =>
 								Swal.fire({
-									title: 'Specific Dates',
+									title: '<h4>Specific Dates</h4>',
 									html: `
 									<table style="width: 100%">
 										<tr style="padding: 20">
@@ -60,20 +60,36 @@ export const Map = () => {
 										</tr>
 										<tr>
 											<th style="text-align: left">Code</th>
-											<td style="text-align: right">${i.country_code}</td>
+											<td style="text-align: right">${i.country_code.toUpperCase()}</td>
+										</tr>
+										<tr>
+											<th style="text-align: left">Actives</th>
+											<td style="text-align: right">${new Intl.NumberFormat(
+												'de-DE'
+											).format(
+												i.confirmed - i.dead - i.recovered
+											)}</td>
 										</tr>
 										<tr>
 											<th style="text-align: left">Confirmed</th>
-											<td style="text-align: right">${i.confirmed}</td>
+											<td style="text-align: right">${new Intl.NumberFormat(
+												'de-DE'
+											).format(i.confirmed)}</td>
 										</tr>
 										<tr>
 											<th style="text-align: left">Dead</th>
-											<td style="text-align: right">${i.dead}</td>
+											<td style="text-align: right">${new Intl.NumberFormat(
+												'de-DE'
+											).format(i.dead)}</td>
 										</tr>
 										<tr>
 											<th style="text-align: left">Recovered</th>
 											<td style="text-align: right">${
-												i.recovered === null ? 'No Update' : i.recovered
+												i.recovered === null
+													? 'No Update'
+													: new Intl.NumberFormat('de-DE').format(
+															i.recovered
+													  )
 											}</td>
 										</tr>
 										<tr>
@@ -92,7 +108,8 @@ export const Map = () => {
 									padding: '5% 10px 20px',
 									background: 'rgba(0, 0, 0, .5)',
 									timer: 20000,
-									confirmButtonText: 'View more'
+									confirmButtonText: 'View more',
+									timerProgressBar: true,
 								})
 							}
 						></Circle>
@@ -102,32 +119,3 @@ export const Map = () => {
 		</Container>
 	);
 };
-
-// const tabla =	`<h3>Specific Data</h3>
-// 	<table class='tabla'>
-// 		<tr>
-// 			<th>State</th>
-// 			<td>${i.location}</td>
-// 		</tr>
-// 		<tr>
-// 			<th>State</th>
-// 			<td>${i.confirmed}</td>
-// 		</tr>
-// 		<tr>
-// 			<th>State</th>
-// 			<td>${i.dead}</td>
-// 		</tr>
-// 		<tr>
-// 			<th>State</th>
-// 			<td>${i.recovered}</td>
-// 		</tr>
-// 		<tr>
-// 			<th>State</th>
-// 			<td>${i.country_code}</td>
-// 		</tr>
-// 		<tr>
-// 			<th>State</th>
-// 			<td>${i.updated}</td>
-// 		</tr>
-// 	</table>
-// 	`;

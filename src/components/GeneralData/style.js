@@ -15,6 +15,7 @@ export const Container = styled.div`
 
 export const Head = styled.div`
   grid-area: a;
+  color: white;
 `;
 
 export const Total = styled.div`
