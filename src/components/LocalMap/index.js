@@ -6,7 +6,7 @@ import Tx from '../../assets/dataMaps/TX.json';
 export const MyMap = (props) => {
 	const stateStyle = {
 		fillColor: 'red',
-		fillOpacity: 0.5,
+		fillOpacity: 0.3,
 		color: 'black',
 		weight: 2,
 	};

@@ -1,52 +1,10 @@
 import React from 'react';
 import { Container, List, Item } from './style';
 import { MyMap } from '../../components/LocalMap/index';
-import Tx from '../../assets/dataMaps/TX.json';
-import Al from '../../assets/dataMaps/AL.json';
-import Ca from '../../assets/dataMaps/CA.json';
-import Ny from '../../assets/dataMaps/NY.json';
-import Ak from '../../assets/dataMaps/AK.json';
+import { data } from '../../Hook/ArrayData';
 
 export const ListOfMaps = () => {
-	const data = [
-		{
-			id: 1,
-			title: 'TX',
-			geojson: Tx,
-			longitude: 31.9685988,
-			latitude: -99.9018131,
-		},
-		{
-			id: 2,
-			title: 'AL',
-			geojson: Al,
-			longitude: 32.3182314,
-			latitude: -86.902298,
-		},
-		{
-			id: 3,
-			title: 'CA',
-			geojson: Ca,
-			longitude: 36.778261,
-			latitude: -119.4179324,
-		},
-		{
-			id: 4,
-			title: 'NY',
-			geojson: Ny,
-			longitude: 40.7127753,
-			latitude: -74.0059728,
-		},
-		{
-			id: 5,
-			title: 'AK',
-			geojson: Ak,
-			longitude: 64.2008413,
-			latitude: -149.4936733,
-		},
-	];
-
-	console.log(data[0].geojson);
+	console.log(data);
 	return (
 		<Container>
 			<List>
@@ -97,12 +55,35 @@ export const ListOfMaps = () => {
 					/>
 				</Item>
 				<Item>
-					<MyMap />
+					<MyMap
+						key={data[5].id}
+						title={data[5].title}
+						latitude={data[5].latitude}
+						longitude={data[5].longitude}
+						data={data[5].geojson}
+					/>
 				</Item>
 				<Item>
-					<MyMap />
+					<MyMap
+						key={data[6].id}
+						title={data[6].title}
+						latitude={data[6].latitude}
+						longitude={data[6].longitude}
+						data={data[6].geojson}
+					/>
 				</Item>
 			</List>
 		</Container>
 	);
 };
+
+// {data.map((id) => {
+// 	<Item key={id}>
+// 		<MyMap
+// 			title={id.title}
+// 			latitude={id.latitude}
+// 			longitude={id.longitude}
+// 			data={id.geojson}
+// 		/>
+// 	</Item>;
+// })}

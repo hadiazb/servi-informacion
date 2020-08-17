@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	width: 100%;
-	border: 1px solid red;
 	padding: 100px 20px 50px;
+	background-color: #242524;
 `;
 
 export const List = styled.div`
 	width: 100%;
-	border: 1px solid green;
 	display: grid;
 	grid-template-columns: repeat(4, minmax(260px, 1fr));
 	grid-template-rows: repeat(10, 300px);
@@ -27,5 +26,5 @@ export const List = styled.div`
 export const Item = styled.div`
 	width: 100%;
 	height: 100%;
-	border: 1px solid green;
+	overflow: hidden;
 `;
