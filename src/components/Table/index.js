@@ -25,13 +25,14 @@ export const MaterialTableDemo = () => {
 		data: usaData,
 	};
 
+	console.log(usaData)
 	return (
 		<Container>
 			<MaterialTable
 				columns={newArr.columns}
 				data={newArr.data}
 				title=''
-				options={{ paging: false }}
+				options={{ paging: false, exportButton: true }}
 				style={{
 					backgroundColor: '#F1F7F1 ',
 					fontSize: '16px',
