@@ -54,6 +54,16 @@ Si no pudiste ejecutar el proyecto en local puedes contactarme con mis datsos de
 
 https://servi-informacion.vercel.app/
 
+## Pages 
+
+[![N|Solid](https://user-images.githubusercontent.com/57742000/90410815-7610e880-e070-11ea-9bcc-6e9d3e2685de.png)](https://user-images.githubusercontent.com/57742000/90410815-7610e880-e070-11ea-9bcc-6e9d3e2685de.png)
+
+[![N|Solid](https://user-images.githubusercontent.com/57742000/90411220-0ea76880-e071-11ea-887a-0ade9d047689.png)](https://user-images.githubusercontent.com/57742000/90411220-0ea76880-e071-11ea-887a-0ade9d047689.png)
+
+[![N|Solid](https://user-images.githubusercontent.com/57742000/90411556-93928200-e071-11ea-9188-08aefc207c97.png](https://user-images.githubusercontent.com/57742000/90411556-93928200-e071-11ea-9188-08aefc207c97.png)
+
+[![N|Solid](https://user-images.githubusercontent.com/57742000/90411664-b4f36e00-e071-11ea-9eae-5444b15dc733.png)](https://user-images.githubusercontent.com/57742000/90411664-b4f36e00-e071-11ea-9eae-5444b15dc733.png)
+
 ### Este es un proyecto desarrollado por CrackCode. 
 - Telefono 311-268-1981
 - <hugoandresdiazbernal@gmail.com>
