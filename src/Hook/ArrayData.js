@@ -5,6 +5,9 @@ import Ny from '../assets/dataMaps/NY.json';
 import Ak from '../assets/dataMaps/AK.json';
 import Ar from '../assets/dataMaps/AR.json';
 import Az from '../assets/dataMaps/AZ.json';
+import Co from '../assets/dataMaps/CO.json';
+import Fl from '../assets/dataMaps/FL.json';
+import Ne from '../assets/dataMaps/NE.json';
 
 export const data = [
 	{
@@ -55,5 +58,26 @@ export const data = [
 		geojson: Az,
 		longitude: 34.0489281,
 		latitude: -111.0937311,
+  },
+  {
+		id: 8,
+		title: 'CO',
+		geojson: Co,
+		longitude: 39.5500507,
+		latitude: -105.7820674,
+  },
+  {
+		id: 9,
+		title: 'FL',
+		geojson: Fl,
+		longitude: 27.6648274,
+		latitude: -81.5157535,
+  },
+  {
+		id: 10,
+		title: 'NE',
+		geojson: Ne,
+		longitude: 41.4925374,
+		latitude: -99.9018131,
 	},
 ];

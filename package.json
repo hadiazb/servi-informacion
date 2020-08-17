@@ -33,7 +33,6 @@
 		"material-table": "^1.68.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
-		"react-google-maps": "^9.4.5",
 		"react-leaflet": "^2.7.0",
 		"react-router-dom": "^5.2.0",
 		"styled-components": "^5.1.1",

@@ -1,8 +1,7 @@
 # Contenido
 - Descripción del proyecto
 - Herramientas Usadas
-- Versión
-- Metodogias
+- Versión y licencia
 - API
 - Procedimiento para deploy
 
@@ -14,29 +13,24 @@ Las herramientas empleadas en este proyecto son listadas a continuación:
 
 - Editor Visual Studio Code
 - HTML5
-- CSS3
-- JavaScript (puro en su mayoria)
-- JQuery (tomado del sitio oficial como un link)
-- Preprocesador de Styles SASS
+- Styled-components para los estilos 
+- React, Framework de JS
+- Babel para transpilar codigo JS
+- Vercel para hacer deploy en producción
+- React-router para  gestionar las rutas de la app
+- google-map-react para usar mapas de google maps
+- leaflet para maps de formato geojson
+- Material-UI para componentes
+- sweetalert2 interactividad en anuncios
 - NPM, node, gestor de paquetes y dependencias
-- Dependencia live-server, genera un servidor local (localHost), para desarrollo de proyecto
-- Dependencia node-sass, para compilar codigo .sass o scss en archivo .css CSS3
+- Webpack para empaquetar archivos
 - Google maps, con API_KEY suministrada por el cliente.
 - API data suministrada por el cliente: https://www.trackcorona.live/api
 - Postman, para descripción de API
 - Repocitorio de GitHub con contenido Cartografico: https://github.com/unitedstates/districts/tree/gh-pages/states
 
 ## Vesión
-En la actualidad se cuenta con la v1.0.0, que nos permite el uso de herramientas básicas para la visualización de usuario final.
-
-## Metodologias 
-En este proyecto se emplearon las siguientes metodologías con el objetivo de hacer código más limpio y fácil de leer.
-
-- Metodología BEM, Bloque-Elemento-Modificador, es empleada en los archivos de SASS que compilan en CSS
-
-- Asignación de variables empleado camelCase, específicamente en JavaScript
-
-- Empleo de Flexbox en el box-model y @media, para hacer un webside resposivo que se responda a las pantallas comerciales.
+En la actualidad se cuenta con la v1.0.0, que nos permite el uso de herramientas básicas para la visualización de usuario final, en relación a la Licencia cuenta con MIT Licence
 
 ## API
 Las API y recursos se encuentran en los siguientes links
@@ -45,16 +39,20 @@ Las API y recursos se encuentran en los siguientes links
 - `<link>` :<https://www.trackcorona.live/api/provinces>
 - `<link>` :<https://www.trackcorona.live/api/cities>
 
-## Procedimiento para deploy
+## Procedimiento para correr en local
 
-- Debes clonar el repocitorio con el siguiente código `$ git clone https://github.com/hadiazb/testFront.git`
-- Luego de la descarga debes instalar node y npm como se muestra `$ node install` y `$ npm install`
+- Debes clonar el repocitorio con el siguiente código `$ git clone https://github.com/hadiazb/servi-informacion.git`
+- Luego de la descarga debes instalar node y las dependencias de npm usadas`$ node install` y `$ npm install` respectivamente.
 - Verificar versión con  `$ node -v` y `$ npm -v`
-- Ahora debes instalar la unica dependencia necesaria, ya que el codigo .sass ya fue compilado es `$ npm i -D live-server`, para generar localHost.
-- Para correr este proyecto en local ya esta configurado el script en el package como `$"start": "live-server"`, por lo cual la linea de codigo en la terminal sera `$ npm run start`, con esto se abrir el proyecto en el navegador que tengas predeterminado.
-- Dado que el archivo se indexa en un html, pensando en el modelo vista controlador,  debes entrar a la carpeta raiz que src/ que se mostrara en el navegador, luego darle click en index.html, con esto sera suficiente para plotear el proyecto.
-- Si nada de lo anterior funciona, puedes entrar a al link que te ofrece el repositorio de gitHub, allí también podras verlo!!!
-- Suerte con ello.
+- Para correr este proyecto en local debes primero usar el script definido en el package.json `$ npm run build`, para empaquetar la aplicación con webpack, luego de estar empaquetada ejecutar el script `$ npm run build:dev` para correr.
+- Luego de lo anterior en el puerto 8000 de tu navegador se podra visualizar la aplicación  http://localhost:8000/ seguro se abre automaticamente.
+
+
+## Liga del Proyecto corriendo en producción en un servidor de Vercel.
+
+Si no pudiste ejecutar el proyecto en local puedes contactarme con mis datsos de contacto que se encuentran al final del repo, por lo pronto puedes ver la aplicación en producción usando este link.
+
+https://servi-informacion.vercel.app/
 
 ### Este es un proyecto desarrollado por CrackCode. 
 - Telefono 311-268-1981

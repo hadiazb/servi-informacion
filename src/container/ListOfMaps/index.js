@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, List, Item } from './style';
+import { Container, List, Item, Title } from './style';
 import { MyMap } from '../../components/LocalMap/index';
 import { data } from '../../Hook/ArrayData';
 
@@ -7,6 +7,7 @@ export const ListOfMaps = () => {
 	console.log(data);
 	return (
 		<Container>
+			<Title>Maps</Title>
 			<List>
 				<Item>
 					<MyMap
@@ -52,6 +53,126 @@ export const ListOfMaps = () => {
 						longitude={data[4].longitude}
 						data={data[4].geojson}
 						zoom={2}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[5].id}
+						title={data[5].title}
+						latitude={data[5].latitude}
+						longitude={data[5].longitude}
+						data={data[5].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[6].id}
+						title={data[6].title}
+						latitude={data[6].latitude}
+						longitude={data[6].longitude}
+						data={data[6].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[7].id}
+						title={data[7].title}
+						latitude={data[7].latitude}
+						longitude={data[7].longitude}
+						data={data[7].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[8].id}
+						title={data[8].title}
+						latitude={data[8].latitude}
+						longitude={data[8].longitude}
+						data={data[8].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[9].id}
+						title={data[9].title}
+						latitude={data[9].latitude}
+						longitude={data[9].longitude}
+						data={data[9].geojson}
+					/>
+				</Item>
+
+
+				<Item>
+					<MyMap
+						key={data[3].id}
+						title={data[3].title}
+						latitude={data[3].latitude}
+						longitude={data[3].longitude}
+						data={data[3].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[4].id}
+						title={data[4].title}
+						latitude={data[4].latitude}
+						longitude={data[4].longitude}
+						data={data[4].geojson}
+						zoom={2}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[5].id}
+						title={data[5].title}
+						latitude={data[5].latitude}
+						longitude={data[5].longitude}
+						data={data[5].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[6].id}
+						title={data[6].title}
+						latitude={data[6].latitude}
+						longitude={data[6].longitude}
+						data={data[6].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[5].id}
+						title={data[5].title}
+						latitude={data[5].latitude}
+						longitude={data[5].longitude}
+						data={data[5].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[6].id}
+						title={data[6].title}
+						latitude={data[6].latitude}
+						longitude={data[6].longitude}
+						data={data[6].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[5].id}
+						title={data[5].title}
+						latitude={data[5].latitude}
+						longitude={data[5].longitude}
+						data={data[5].geojson}
+					/>
+				</Item>
+				<Item>
+					<MyMap
+						key={data[6].id}
+						title={data[6].title}
+						latitude={data[6].latitude}
+						longitude={data[6].longitude}
+						data={data[6].geojson}
 					/>
 				</Item>
 				<Item>

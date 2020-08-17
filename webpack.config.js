@@ -36,7 +36,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'myReact',
+			title: 'Servi-covid',
 			template: path.resolve(__dirname, './src/index.html'),
 		}),
 	],
