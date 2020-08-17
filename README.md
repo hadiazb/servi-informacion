@@ -64,6 +64,6 @@ https://servi-informacion.vercel.app/
 
 [![N|Solid](https://user-images.githubusercontent.com/57742000/90411664-b4f36e00-e071-11ea-9eae-5444b15dc733.png)](https://user-images.githubusercontent.com/57742000/90411664-b4f36e00-e071-11ea-9eae-5444b15dc733.png)
 
-### Este es un proyecto desarrollado por CrackCode. 
+### Contacto
 - Telefono 311-268-1981
 - <hugoandresdiazbernal@gmail.com>
